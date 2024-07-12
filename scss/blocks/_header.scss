@@ -1,0 +1,35 @@
+.header{
+    background-color: $dark-blue;
+
+    &_wrapper{
+        min-height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &_controls{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    &_btn{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    
+    &_navigation{
+        display: none;
+    }
+}
+
+.loupe_icon path, .burger_icon path, .user_icon path, .buy_icon path{
+    fill: #fff;
+}
+
+.loupe_icon:hover path, .burger_icon:hover path, .user_icon:hover path, .buy_icon:hover path{
+    fill: $dark-pink;
+    transition: 0.5s;
+}

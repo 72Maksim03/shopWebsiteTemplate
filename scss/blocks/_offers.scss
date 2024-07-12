@@ -1,0 +1,50 @@
+.offers_list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &_item{
+        width: 32%;
+        min-height: 260px;
+        background-color: $offers-img;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        margin-bottom: 2%;
+        flex-direction: column;
+        @include flex-center;
+
+        &:nth-child(1){
+            background-image: url(../img/offers_woman.jpg);
+        }
+
+        &:nth-child(2){
+            background-image: url(../img/offers_man.jpg);
+        }
+        
+        &:nth-child(3){
+            background-image: url(../img/offers_kids.jpg);
+        }
+        
+        &:nth-child(4){
+            background-image: url(../img/offers_acc.jpg);
+            width: 100%;
+        }
+
+        &_heading{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        &_text{
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 28.8px;
+            text-transform: uppercase;
+            color: $dark-pink;
+        }
+    }   
+}

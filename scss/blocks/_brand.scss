@@ -1,0 +1,35 @@
+.brand{
+    background-color: $pink;
+    margin-bottom: 65px;
+
+    &_wrapper{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        img{
+            margin-left: -250px;
+        }
+    }
+
+    &_title{
+        @include font(48px, 58px, 900);
+        text-transform: uppercase;
+    }
+    
+    &_subtitle{
+        display: block;
+        @include font(32px, 38px, 700);
+        
+        &_pink{
+            color: $dark-pink;
+        }
+    }
+    
+    &_vert_line{
+        width: 12px;
+        height: 92px;
+        background-color: $dark-pink;
+    }
+
+}
