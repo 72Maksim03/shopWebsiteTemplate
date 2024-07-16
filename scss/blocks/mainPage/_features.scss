@@ -1,0 +1,30 @@
+.features{
+    padding: 100px 0;
+    background-color: $features_background;
+
+    &_list{
+        display: flex;
+        justify-content: space-between;
+
+        &_item{
+            width: 30%;
+            text-align: center;
+
+            &:nth-child(2) .features_list_item_name{
+                margin-top: 22px;
+            }
+
+            &_name{
+                margin-top: 28px;
+                @include font(20px, 24px);
+                color: #FBFBFB;
+            }
+
+            &_descr{
+                @include font(14px, 17px);
+                margin-top: 16px;
+                color: #8e8e8f;
+            }
+        }
+    }
+}
