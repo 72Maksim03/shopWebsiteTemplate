@@ -1,0 +1,33 @@
+.footer{
+    background-color: $features_background;
+}
+
+.footer_content{
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright{
+    @include font(16px, 19px);
+    color: #f8f8f8;
+}
+
+.socMedia_back{
+    fill: #ffffff;
+    transition: 0.2s all linear;
+}
+
+.socMedia_main{
+    fill: #000;
+    transition: 0.2s all linear;
+}
+
+.socMedia:hover .socMedia_back{
+    fill: $dark-pink;
+}
+
+.socMedia:hover .socMedia_main{
+    fill: #fff;
+}

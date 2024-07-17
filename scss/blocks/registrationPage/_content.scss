@@ -1,0 +1,121 @@
+.registration_content{
+    padding-top: 64px;
+    padding-bottom: 96px;
+
+    &_wrapper{
+        display: flex;
+        justify-content: space-between;
+
+        &_form{
+            width: 360px;
+
+            &_name{
+                legend{
+                    @include font(16px, 19px);
+                }
+            }
+
+            &_gender{
+                margin: 30px 0;
+                display: flex;
+                align-items: center;
+                margin-left: 19px;
+            }
+        }
+    }
+}
+
+.text_input{
+    width: 360px;
+    margin-top: 20px;
+    height: 45px;
+    border: 1px solid #A4A4A4;
+    padding: 15px;
+    @include font(13px, 16px);
+    display: block;
+}
+
+.radio_input{
+    display: none;
+}
+
+.gender_label{
+    @include font(11px, 13px);
+    margin-right: 39px;
+    position: relative;
+}
+
+.gender_label:before{
+    content: '';
+    position: absolute;
+    left: -19px;
+    top: -8%;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url("../img/selection_unchecked.png") center center/cover no-repeat;
+}
+
+.radio_input:checked+.gender_label:before{
+    background: url("../img/selection_checked.png") center center/cover no-repeat;
+}
+
+.registration_content_wrapper_form_login_text{
+    margin-top: 15px;
+    @include font(13px, 16px);
+    color: #B1B1B1;
+}
+
+.registration_content_wrapper_form_btn{
+    padding: 16px 29px;
+    margin-top: 39px;
+    border: none;
+    background-color: var(--dark-pink);
+    color: #fff;
+    cursor: pointer;
+    @include font(14px, 17px);
+}
+
+.registration_content_wrapper_form_btn i{
+    margin-left: 20px;
+}
+
+.registration_content_wrapper_form_btn:hover{
+    opacity: 0.5;
+}
+
+.registration_content_wrapper_descr{
+    width: 652px;
+}
+
+.registration_content_wrapper_descr_title{
+    @include font(24px, 29px);
+    margin-bottom: 22px;
+}
+
+.registration_content_wrapper_descr_text{
+    @include font(24px, 29px);
+    margin-bottom: 21px;
+}
+
+.registration_content_wrapper_descr_features{
+    list-style-type: none;
+    margin-left: 50px;
+}
+
+.registration_content_wrapper_descr_features_item{
+    @include font(24px, 29px);
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.registration_content_wrapper_descr_features_item:before{
+    content: '';
+    width: 20px;
+    height: 16px;
+    background: url("../../../img/check.svg") center center/cover no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: 7px;
+    left: -50px;
+}

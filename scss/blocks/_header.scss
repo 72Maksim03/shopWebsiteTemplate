@@ -20,8 +20,77 @@
         cursor: pointer;
     }
     
-    &_navigation{
-        display: none;
+    &_navbar{
+        position: absolute;
+        right: 0;
+        background-color: #fff;
+        padding-top: 35px;
+        padding-left: 35px;
+        padding-right: 100px;
+        height: 764px;
+        box-shadow: -5px 5px 5px 2px $grey;
+        transform: scaleX(0);
+        transition: all linear .5s;
+
+        &.active{
+            transform: scaleX(100%);
+            transition: all linear 0.5s;
+        }
+        
+        &_closer{
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            cursor: pointer;
+
+            path{
+                fill: $grey;
+                transition: all linear .5s;
+            }
+
+            &:hover{
+                path{
+                    fill: $dark-pink;
+                }
+            }
+        }
+
+        &_title{
+            @include font(14px, 17px, 700);
+        }
+
+        &_list{
+            margin-top: 24px;
+            &_item{
+                margin-bottom: 20px;
+                &_title{
+                    @include font(14px, 17px);
+                    color: $dark-pink;
+                }
+                &_innerList{
+                    padding-left: 20px;
+                    &_item{
+                        margin-top: 12px;
+                        a{
+                            @include font(14px, 17px);
+                            text-decoration: none;
+                            color: #6F6E6E;
+                            transition: all linear .5s;
+                            &:hover{
+                                color: $dark-pink;
+                            }                            ;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:before{
+            content: '';
+            width: 100px;
+            height: 764px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
     }
 }
 
