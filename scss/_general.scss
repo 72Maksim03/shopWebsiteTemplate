@@ -24,3 +24,19 @@ body{
     max-width: 1138px;
     margin: 0 auto;
 }
+
+.general_intro{
+    background-color: $registration_bacground;
+    width: 100%;
+
+    &_wrapper{
+        display: flex;
+        align-items: center;
+        min-height: 148px;
+    }
+
+    &_title{
+        @include font(24px, 29px);
+        color: $dark-pink;
+    }
+}

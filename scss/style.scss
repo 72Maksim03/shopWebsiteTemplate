@@ -1,7 +1,7 @@
 @import './reset';
-@import './general';
 @import './variables';
 @import './mixins';
+@import './general';
 @import './blocks/header';
 @import './blocks/mainPage/brand';
 @import './blocks/mainPage/offers';
@@ -9,5 +9,5 @@
 @import './blocks/mainPage/features';
 @import './blocks/mainPage/subscribe';
 @import './blocks/footer';
-@import './blocks/registrationPage/intro';
 @import './blocks/registrationPage/content';
+@import './blocks/cart/content';
