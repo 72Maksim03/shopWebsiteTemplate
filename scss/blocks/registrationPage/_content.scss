@@ -5,9 +5,16 @@
     &_wrapper{
         display: flex;
         justify-content: space-between;
+        @include mobile{
+            flex-direction: column;
+            gap: 40px;
+        }
 
         &_form{
-            width: 360px;
+            width: 32%;
+            @include mobile{
+                width: 100%;
+            }
 
             &_name{
                 legend{
@@ -26,7 +33,7 @@
 }
 
 .text_input{
-    width: 360px;
+    width: 100%;
     margin-top: 20px;
     height: 45px;
     border: 1px solid #A4A4A4;
@@ -70,7 +77,7 @@
     padding: 16px 29px;
     margin-top: 39px;
     border: none;
-    background-color: var(--dark-pink);
+    background-color: $dark-pink;
     color: #fff;
     cursor: pointer;
     @include font(14px, 17px);
@@ -85,17 +92,26 @@
 }
 
 .registration_content_wrapper_descr{
-    width: 652px;
+    width: 57%;
+    @include mobile{
+        width: 100%;
+    }
 }
 
 .registration_content_wrapper_descr_title{
     @include font(24px, 29px);
     margin-bottom: 22px;
+    @include mobile{
+        @include font(16px, 19px);
+    }
 }
 
 .registration_content_wrapper_descr_text{
     @include font(24px, 29px);
     margin-bottom: 21px;
+    @include mobile{
+        @include font(16px, 19px);
+    }
 }
 
 .registration_content_wrapper_descr_features{
@@ -107,6 +123,9 @@
     @include font(24px, 29px);
     margin-bottom: 16px;
     position: relative;
+    @include mobile{
+        @include font(16px, 19px);
+    }
 }
 
 .registration_content_wrapper_descr_features_item:before{

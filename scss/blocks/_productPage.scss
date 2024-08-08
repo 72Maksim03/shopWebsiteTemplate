@@ -1,0 +1,117 @@
+.product{
+    &_collection{
+        position: relative;
+        top: -50px;
+        &_wrapper{
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 64px 20%;
+            @include tablet{
+                padding: 64px 10%;
+            }
+            @include mobile{
+                padding: 64px 2%;
+            }
+
+            &_title{
+                @include font(14px, 17px);
+                color: $dark-pink;
+                margin-bottom: 12px;
+            }
+
+            &_line{
+                width: 12%;
+                height: 3px;
+                background-color: $dark-pink;
+                margin-bottom: 12px;
+            }
+
+            &_subtitle{
+                @include font(18px, 21px);
+                color: $grey;
+                margin-bottom: 48px;
+            }
+
+            &_descr{
+                @include font(14px, 17px);
+                text-align: center;
+                margin-bottom: 32px;
+            }
+
+            &_price{
+                @include font(24px, 29px);
+                margin-bottom: 64px;
+                color: $dark-pink;
+            }
+
+            &_line2{
+                width: 100%;
+                height: 3px;
+                background-color: #EAEAEA;
+                margin-bottom: 64px;
+            }
+
+            &_dropdowns{
+                display: flex;
+                gap: 4%;
+                @include mobile{
+                    gap: 0;
+                }
+
+                .dropdown{
+                    button{
+                        background: none;
+                        border: none;
+                        color: #6F6E6E;
+                        @include mobile{
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+
+            .product_btn{
+                &_cart{
+                    path{
+                        fill: $dark-pink;
+                        transition: .3s linear all;
+                    }
+                }
+                &:hover{
+                    .product_btn_cart{
+                        path{
+                            fill: #fff;
+                            transition: .3s linear all;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_items{
+        margin-bottom: 120px;
+        .catalog_list{
+            @include tablet{
+                flex-direction: row-reverse;
+            }
+            &_item{
+                @include tablet{
+                    &:nth-child(3){
+                        display: none;
+                    }
+                }
+                @include mobile{
+                    &:nth-child(2){
+                        display: none;
+                    }
+                    &:nth-child(3){
+                        display: block;
+                    }
+                }
+                
+            }
+        }
+    } 
+}

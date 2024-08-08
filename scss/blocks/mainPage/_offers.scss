@@ -2,7 +2,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
+    // @include mobile{
+    //     flex-direction: column;
+    // }
     &_item{
         width: 32%;
         min-height: 260px;
@@ -13,6 +15,9 @@
         margin-bottom: 2%;
         flex-direction: column;
         @include flex-center;
+        @include mobile{
+            width: 100%;
+        }
 
         &:nth-child(1){
             background-image: url(../img/offers_woman.jpg);

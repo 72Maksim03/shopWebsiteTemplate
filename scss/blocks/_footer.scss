@@ -7,6 +7,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include mobile{
+        flex-direction: column-reverse;
+        padding-top: 43px;
+        gap: 40px;
+        padding-bottom: 10px;
+    }
 }
 
 .copyright{

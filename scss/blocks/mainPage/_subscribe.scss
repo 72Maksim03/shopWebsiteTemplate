@@ -6,10 +6,22 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include tablet{
+            flex-direction: column;
+            gap: 48px;
+            padding-top: 64px;
+            padding-bottom: 140px;
+        }
 
         &_review{
-            width: 360px;
+            width: 32%;
             text-align: center;
+            @include tablet{
+                width: 50%;
+            }
+            @include mobile{
+                width: 100%;
+            }
 
             &_text{
                 @include font(20px, 24px);
@@ -22,26 +34,35 @@
         }
 
         &_form{
-            width: 557px;
+            width: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            @include mobile{
+                width: 100%;
+            }
+            
 
            &_title{
                 @include font(24px, 40px, 700);
                 text-transform: uppercase;
+                text-align: center;
             }
 
             &_subtitle{
                 @include font(18px, 30px, 400);
                 text-transform: uppercase;
+                margin-bottom: 32px;
+                text-align: center;
             }
 
             &_inputs{
-                margin-top: 32px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
 
                 &_email{
-                    width: 256px;
+                    width: 76%;
                     height: 49px;
                     border: none;
                     padding-left: 22px;
@@ -51,7 +72,7 @@
                 }
 
                 &_submit{
-                    width: 100px;
+                    width: 37%;
                     height: 51px;
                     border: none;
                     padding-left: 22px;

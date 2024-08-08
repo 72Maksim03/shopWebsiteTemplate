@@ -24,16 +24,21 @@
         position: absolute;
         right: 0;
         background-color: #fff;
-        padding-top: 35px;
-        padding-left: 35px;
-        padding-right: 100px;
-        height: 764px;
+        padding-top: 2%;
+        padding-left: 2%;
+        padding-right: 6%;
         box-shadow: -5px 5px 5px 2px $grey;
-        transform: scaleX(0);
+        transform: scaleY(0);
         transition: all linear .5s;
+        @include tablet{
+            padding-right: 10%;
+        }
+        @include mobile{
+            padding-right: 15%;
+        }
 
         &.active{
-            transform: scaleX(100%);
+            transform: scaleY(100%);
             transition: all linear 0.5s;
         }
         
@@ -101,4 +106,16 @@
 .loupe_icon:hover path, .burger_icon:hover path, .user_icon:hover path, .buy_icon:hover path{
     fill: $dark-pink;
     transition: 0.5s;
+}
+
+@media (max-width: 768px){
+    .header_logo{
+        margin-right: 18px;
+    }
+}
+
+@media (max-width: 375px){
+    .buy_icon{
+        display: none;
+    }
 }

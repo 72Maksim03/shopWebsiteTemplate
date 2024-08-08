@@ -3,7 +3,7 @@
 }
 
 body{
-    font-family: Lato;
+    font-family: 'Lato', 'Arial', sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -21,7 +21,7 @@ body{
 }
 
 .container{
-    max-width: 1138px;
+    width: 71%;
     margin: 0 auto;
 }
 
@@ -32,11 +32,34 @@ body{
     &_wrapper{
         display: flex;
         align-items: center;
+        justify-content: space-between;
         min-height: 148px;
+        @include mobile{
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+
+        &_cont{
+            @include font(14px, 17px, 300);
+            color: $grey;
+            text-decoration: none;
+        }
+        &_cont.active{
+            color: $dark-pink;
+        }
+        
     }
 
     &_title{
         @include font(24px, 29px);
         color: $dark-pink;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 96%;
     }
 }

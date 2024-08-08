@@ -1,14 +1,29 @@
 .features{
     padding: 100px 0;
     background-color: $features_background;
+    @include tablet{
+        padding-top: 48px;
+        padding-bottom: 64px;
+    }
 
     &_list{
         display: flex;
         justify-content: space-between;
+        @include tablet{
+            flex-direction: column;
+            align-items: center;
+            gap: 48px;
+        }
 
         &_item{
             width: 30%;
             text-align: center;
+            @include tablet{
+                width: 50%;
+            }
+            @include mobile{
+                width: 100%;
+            }
 
             &:nth-child(2) .features_list_item_name{
                 margin-top: 22px;
